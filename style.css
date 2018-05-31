@@ -1,0 +1,265 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 29, 2015, 9:28:11 PM
+    Author     : Phil
+*/
+html {
+    box-sizing: border-box;
+}
+body {
+    margin: auto;
+    background-color: #333366;
+}
+
+.puzzlelist {
+    margin:auto;
+    width: 50%;
+    text-align: center;
+    font-size: 24px;
+}
+
+
+/*#puzzleControls{
+    display: inline-block;
+    /*margin: 10px;
+}
+*/
+
+#puzzleControls{
+    margin: auto;
+    text-align: center;
+}
+.randomPuzzle, .restartPuzzle {
+    display: inline;
+    padding: .2em;
+    background-color: #3366ff;
+    color: #ffcc00;
+    border-color: #ffcc00;
+}
+
+.controlButton {
+    background-color: #3366ff;
+    color: #ffcc00;
+    font-size: 20px;
+    border-color: #ffcc00;
+    border-style: dashed;
+}
+/*#restartPuzzleButton{
+    float: left;
+    color:red;
+}
+#randomPuzzleButton{
+    float:right;
+}
+*/
+.statusbar {
+    width: 100%;
+    margin: auto;
+    background-color: #93FF;
+    text-align: center;
+}
+
+.bodyContent {
+    background-color: #99cccc;
+    margin: 0;
+    border-style: double;
+    padding: .3em;
+}
+
+/*.container { 
+    width: 100%; 
+    margin: auto;
+    text-align: center;
+
+}*/
+
+#canvasDiv {
+    width = 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#navbar {
+    margin: 0px;
+    font-size: 14px; 
+    background-color: black;
+    color: white;
+    height: 50px;
+    /*position: fixed;*/
+    width: 100%;
+}
+#navRight {
+    width: 50%;
+    float: right;
+}
+#navRight li {
+    display: inline;
+}
+
+#navLoginDiv {
+        /*text-align: center;*/
+    margin-bottom: auto;
+}
+#navLeft {
+    width: 50%;
+    float: left;
+}
+
+#navbar a{
+    color: white;
+}
+
+#navbar > a:visited {
+    color: #f1ee2a;
+}
+#navbar > a:hover {
+    color: #00B333;
+}
+
+.leftAlign {
+    width: 100%;
+    text-align: left;
+    
+}
+
+.navLoginForm input {
+    width: 30%;
+    display: inline;
+    margin-left: 10px;
+    text-align: left;
+}
+
+#navSubmit {
+    width: auto;
+    text-align: center;
+/*    display: block;
+*/}
+
+
+form ul {padding: 0;}
+form li {list-style: none;}
+/*.body {width: auto; margin: auto; }*/
+
+
+/*form input[type = text], form textarea { width: 50%; margin-bottom: 0em; }
+form textarea {width: 100%; height: 300px; }
+*/            label { display: inline;}
+
+.navLoginField {
+    display: inline;
+
+}
+
+/* NOTES 
+img {
+    max-width: 100%;
+}
+#navigation {
+    background-color: goldenrod;
+    position: fixed;
+    width: 100%;
+/*    max-width: 900px;
+    text-align: center;   
+}
+
+.navigation a {  
+    padding: .5em 3em .5em;
+    margin: 0 1% 1% 0;
+}
+a:link {
+
+}
+body {
+    background-color: tan;
+    margin: 0 0 0 0;
+    height: 100%;
+}
+#main {
+    @import "robotstyle.css";
+    background-color: grey;
+    margin:auto;
+    max-width: 800px;
+    display: table;
+    width: 80%;
+    
+}
+
+#content {
+   box-sizing: border-box;
+   padding: 10px 0 10px 15px;
+   background-color: #ff7818;
+   float: left;
+   width: 75%;
+}
+
+#sidebar {
+    background: grey;
+    margin-top: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    float:right;
+    width: 25%;
+    color: wheat;
+    height: 100%;
+}
+
+#footer {
+    background-color: #eed57a;
+    clear:both;
+    text-align: center;
+    width: 100%;
+    position: static;
+    margin: 5px 0 5px 0;
+    padding: 5px 0 5px 0;
+}
+
+.centerheading {
+    text-align: center;
+}
+
+img.center {
+    display: block;
+    height: auto;
+    margin-left:  auto;
+    margin-right: auto;
+    max-height: 50%;
+}
+
+h1 {
+    display: block;
+    text-align: center;
+}
+
+html,body {
+    font-family: arial;
+    margin: 0; padding: 0;
+    background-color: #0F2B48;
+}
+h1 {
+    text-align: center;
+    font-size-adjust: 20;
+}
+#header, #main, #footer {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #6F4A15;
+    color: #D4AD71;
+}
+ul#nav{
+    margin: 0; padding: 0; list-style-type: none;
+    background-color: #6F4A15;
+    overflow: auto;
+}
+ul#nav li {
+    color: #FFFFFF;
+ 
+}
+
+ul#nav li a:hover {
+    background-color: #22FF00;
+}
+*/

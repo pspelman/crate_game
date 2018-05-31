@@ -1,0 +1,13 @@
+instead of defining all variables at the top
+problem with the original get
+
+the form would be repopulated with nothin
+
+where you normaly say $htmleitiesyou say if !isdefined
+
+	
+At the time the user is valiated, we want to be able to store things in their session
+
+**************
+
+signing out, make sure no one else signs i nbefore we sign out
