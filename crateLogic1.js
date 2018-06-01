@@ -525,7 +525,7 @@ function moves (game, input) { //THIS IS THE FUNCTION TO MOVE THE PUSHER AND CRA
                     
                 } else {
                     console.log("TOO HEAVY FOR YOU!");
-                    alert("TOO HEAVY FOR YOU! GIRRRRRLY MAAAN!");
+                    alert("TOO HEAVY FOR YOU!");
                 };
             }
         }

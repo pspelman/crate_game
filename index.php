@@ -3,6 +3,7 @@ require 'gamereqs.php';
 //Get ALL the posts
 $puzzles = get('puzzles', $conn, 10);
 
+//require "views/index.view.php";
 
 view('index', array(
 	'puzzles' => $puzzles)

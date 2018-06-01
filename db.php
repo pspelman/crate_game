@@ -3,9 +3,10 @@
 //INTERNAL, DEFAULT CONFIG, ACCESS TO THE OVERALL DB
 $config = array(
 	'username' => 'root',
-	'password' => '',
+	'password' => 'root',
 	'database' => 'cratedb'
 	);
+
 
 
 
@@ -17,16 +18,28 @@ function test_input($data) {
 }
 							//CONNECT TO THE DB WITH THIS FUNCTION
 function connect($config) {
-	try {
-		$conn = new PDO('mysql:host=localhost; dbname=' . $config['database'],
-			$config['username'],
-			$config['password']);
+//function connect() {
+//		$conn = new PDO('mysql:host=localhost; dbname=' . $config['database'],
+    try {
+//		$conn = new PDO('mysql:host=localhost;dbname=cratedb',
+//
+//			$config['username'],
+//			$config['password']);
 
-	
-		$conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+        $connection = new PDO('mysql:host=127.0.0.1;dbname='.$config['database'],$config['username'],$config['password']);
+        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+//        $conn = new PDO('mysql:host=localhost;dbname=crategame, root, root');
+//        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+//		$conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 		// echo($config['database']);
-		return $conn;
+		return $connection;
 	} catch(Exception $e) {
+        echo "error: " . $e;
+
+        echo "there was an error connecting\r\n";
+
 	return false;
 
 
@@ -56,9 +69,9 @@ function insert($config, $conn, $query, $tableName) {
 //$bindings is something like $bindings = array( 'tag' => $tag );
 //$conn is like new PDO('mysql:host=localhost; dbname=' . $config['database'],
 			// $config['username'],
-			// $config['password']); 
+			// $config['password']);
 function query($query, $bindings, $conn) {
-	
+
 	$stmt = $conn->prepare($query);
 	$stmt->execute($bindings);
 	return $stmt;
@@ -75,13 +88,13 @@ function update($query, $bindings, $conn) {
 }
 
 
-function getAll($tableName, $conn) 
+function getAll($tableName, $conn)
 {
 	try {
 		$result = $conn->query("SELECT * FROM " . $tableName);
 
-		return ( $result->rowCount() > 0) 
-		? $result 
+		return ( $result->rowCount() > 0)
+		? $result
 		: false;
 	} catch(Exception $e) {
 		return false;
@@ -89,13 +102,13 @@ function getAll($tableName, $conn)
 }
 
 
-function get($tableName, $conn, $limit = 10) 
+function get($tableName, $conn, $limit = 10)
 {
 	try {
 		$result = $conn->query("SELECT * FROM " . $tableName . " LIMIT " . $limit);
 
-		return ( $result->rowCount() > 0) 
-		? $result 
+		return ( $result->rowCount() > 0)
+		? $result
 		: false;
 	} catch(Exception $e) {
 		return false;
@@ -104,8 +117,8 @@ function get($tableName, $conn, $limit = 10)
 
 //ID IS SENT LAST AS THE BINDING
 
-function get_by_id($seedlev, $conn) 
-{	
+function get_by_id($seedlev, $conn)
+{
 	return query(
 		'SELECT * FROM puzzles WHERE seedlev = :seedlev LIMIT 1',
 		array('seedlev' => $seedlev), 			//THIS IS WHERE THE BINDING IS SENT TO THE FUNCTION

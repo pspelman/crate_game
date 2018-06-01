@@ -5,4 +5,4 @@ require 'db.php';
 
 //CONNECT TO DB
 $conn = connect($config);
-if ( !$conn ) die ('Problem connecting');
+//if ( !$conn ) die ('Problem connecting ARGH!');

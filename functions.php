@@ -8,7 +8,7 @@ function view($path, $data = null) {
 	}
 	$path = $path . '.view.php';
 	include 'views/layout.php';
-	// include "views/{$path}.view.php";
+//	 include "views/{$path}.view.php";
 };
 
 
